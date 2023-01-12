@@ -136,35 +136,39 @@ main section .text{
   filter: invert(1);
 }
 
+footer{
+  position: relative;
+  bottom: 3rem;
+}
 
 footer .cards{
   display: flex;
   align-items: center;
   flex-flow: row;
-  margin-left: 23em;
-  margin-top: 1.5em;
+  margin-left: 20em;
 }
 
 footer .cards .card{
-  width: 180px;
+  border-radius: 10px 10px 0 0;
+  width: 120px;
+  margin: 0.2rem;
   max-width: 300px;
   box-shadow: 12px 0px 32px 2px black;
-  margin-left: -120px;
-  cursor: pointer;
   transition: all 0.25s ease-in-out;
   overflow: hidden;
 }
 
 footer .cards .card img{
-  width: 100px;
-  height: 100px;
+  border-bottom: 1px solid white;
+  width: 100%;
   object-fit: cover;
 }
 
-.cards .card:hover{
-  transform: translateY(-16px) rotate(3deg);
+footer .card img:hover:not(:hover){
+  opacity: 1;
 }
 
-.cards .card:hover ~.card{
-  transform: translateX();
+footer .cards .card:hover{
+  scale: 1.2;
+  transition: 500ms;
 }
